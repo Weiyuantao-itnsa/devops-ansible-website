@@ -1,0 +1,8 @@
+- name: call
+  hosts: linux
+  gather_facts: false
+  tasks:
+
+  roles:
+    - nginx
+

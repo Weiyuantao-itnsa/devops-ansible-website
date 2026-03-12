@@ -1,0 +1,4 @@
+linux:
+  hosts:
+    Nginx-server:
+      ansible_host: 159.75.156.10

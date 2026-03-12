@@ -21,6 +21,14 @@
           apt update
           apt install ansible -y 
 
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_ras
+
+
+
       - name: Run Ansible
         run: | 
           ansible-playbook -i ansible/inventory.yml ansible/Nginx.yml

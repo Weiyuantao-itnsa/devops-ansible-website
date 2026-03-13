@@ -12,6 +12,9 @@
 
     - name: deploy website
       copy:
-        src: index.html 
+        src: /root/devops-project/website/index.html 
         dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: '0755'
 

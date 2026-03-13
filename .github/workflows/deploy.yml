@@ -1,17 +1,14 @@
-- name: Deploy Website 
+name: Deploy Website 
   
+on: 
+  push:
+    branches:
+      - main 
+jobs:
+  deploy:
+    runs-on: ubuntu-lastest
 
-  on: 
-    push:
-      branches:
-        - main 
-
-  jobs:
-    deploy:
-
-      runs-on: ubuntu-lastest
-
-      steps:
+    steps:
 
       - name: Checkout code
         uses: actions/checkout@v3

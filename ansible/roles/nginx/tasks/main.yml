@@ -13,7 +13,7 @@
     - name: deploy website
       copy:
         src: website/
-        dest: /var/www/html/index.html
+        dest: /var/www/html/
         owner: root
         group: root
         mode: '0755'

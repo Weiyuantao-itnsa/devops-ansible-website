@@ -12,7 +12,7 @@
 
     - name: deploy website
       copy:
-        src: website/index.html
+        src: index.html
         dest: /var/www/html/index.html
         owner: root
         group: root

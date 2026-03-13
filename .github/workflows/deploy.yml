@@ -6,7 +6,7 @@ on:
       - main 
 jobs:
   deploy:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     steps:
 
@@ -22,7 +22,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_ras
+          chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 159.75.156.10 >> ~/.ssh/known_hosts
 
 

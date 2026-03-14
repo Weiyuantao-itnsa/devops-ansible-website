@@ -28,10 +28,10 @@
     - name: generate ssl certificate 
       command: >
         certbot --nginx 
-        -d winn.top
+        -d www.winn.top
         --non-interactive
         --agree-tos
-        -m admin@winn.top
+        -m 156733071@qq.com
       args:
         creates: /etc/letsencrypt/live/winn.top/fullchain.pem
          

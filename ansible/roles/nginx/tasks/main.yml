@@ -30,7 +30,7 @@
         certbot --nginx 
         -d www.winn.top
         --non-interactive
-        --agree-too
+        --agree-tos
         -m 156733071@qq.com
       args:
         creates: /etc/letsencrypt/live/winn.top/fullchain.pem

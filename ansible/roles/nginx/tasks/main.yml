@@ -18,28 +18,4 @@
         group: root
         mode: '0755'
 
-    - name: install certbot 
-      apt: 
-        name:
-          - certbot
-          - python3-certbot-nginx 
-        state: present 
-
-    - name: generate ssl certificate 
-      command: >
-        certbot --nginx 
-        -d www.winn.top
-        --non-interactive
-        --agree-tos
-        -m 156733071@qq.com
-      args:
-        creates: /etc/letsencrypt/live/winn.top/fullchain.pem
-         
-
-    - name: certbot auto renew
-      cron: 
-        name: certbot renew
-        job: certbot renew --quiet 
-        minute: "0"
-        hour: "3"
 
